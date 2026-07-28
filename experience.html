@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience | Mustafa US (Yontar) - Career Experience</title>
+    <meta name="description" content="Work experience history of Mustafa US (Yontar).">
+    <meta name="author" content="Mustafa US (Yontar)">
+
+    <!-- Google Fonts: Press Start 2P & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-dark: #000000;
+            --bg-card: #0d0d0d;
+            --panel-border: #222222;
+
+            --text-main: #ffffff;
+            --text-sub: #c0c0c0;
+            --text-muted: #808080;
+
+            --accent-blue: #58a6ff;
+            --accent-cyan: #00f2fe;
+            --accent-purple: #bc8cff;
+            --accent-green: #3fb950;
+            --accent-orange: #f74c00;
+            --accent-yellow: #d29922;
+
+            --font-heading: 'Press Start 2P', cursive, monospace;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            animation: none !important;
+            transition: none !important;
+        }
+
+        body {
+            background-color: #000000 !important;
+            color: var(--text-main);
+            font-family: var(--font-body);
+            font-size: 14px;
+            line-height: 1.8;
+            padding-bottom: 4rem;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .site-title,
+        .section-heading,
+        .nav-tab,
+        .btn-contact,
+        .role-title,
+        .company-name {
+            font-family: var(--font-heading);
+        }
+
+        .container {
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Top Header & Nav */
+        .base-header {
+            border-bottom: 2px solid var(--panel-border);
+            background: #080808;
+            padding-top: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .site-title {
+            font-size: 1.6rem;
+            color: #ffffff;
+            margin-bottom: 0.4rem;
+            line-height: 1.4;
+        }
+
+        .sub-name {
+            font-size: 0.85rem;
+            color: var(--accent-cyan);
+            font-weight: 500;
+        }
+
+        .btn-contact {
+            background: #1f6feb;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 0.65rem;
+            border: 1px solid #388bfd;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-contact:hover {
+            background: #388bfd;
+        }
+
+        /* Navigation Tabs */
+        .nav-tabs {
+            display: flex;
+            gap: 0.4rem;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        .nav-tab {
+            color: var(--text-sub);
+            text-decoration: none;
+            padding: 0.65rem 1rem;
+            font-size: 0.68rem;
+            border: 2px solid var(--panel-border);
+            border-bottom: none;
+            background: #0d0d0d;
+            border-radius: 6px 6px 0 0;
+        }
+
+        .nav-tab:hover {
+            color: var(--accent-cyan);
+            border-color: var(--accent-cyan);
+        }
+
+        .nav-tab.active {
+            color: #ffffff;
+            background: #181818;
+            border-color: var(--accent-cyan);
+            border-bottom: 2px solid #181818;
+            margin-bottom: -2px;
+        }
+
+        /* Content Panel */
+        .content-panel {
+            background: #0d0d0d;
+            border: 2px solid var(--panel-border);
+            border-radius: 6px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .section-heading {
+            font-size: 0.95rem;
+            color: var(--accent-cyan);
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--panel-border);
+            padding-bottom: 0.6rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            line-height: 1.6;
+        }
+
+        /* Timeline Cards */
+        .timeline-card {
+            background: #141414;
+            border: 1px solid var(--panel-border);
+            padding: 1.4rem;
+            border-radius: 6px;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .role-title {
+            font-size: 0.85rem;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        .company-name {
+            font-size: 0.72rem;
+            color: var(--accent-blue);
+            margin-top: 0.3rem;
+        }
+
+        .location-text {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin-bottom: 0.8rem;
+        }
+
+        .bullets-list {
+            list-style: none;
+            margin-bottom: 0.8rem;
+        }
+
+        .bullets-list li {
+            position: relative;
+            padding-left: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-sub);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .bullets-list li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--accent-cyan);
+        }
+
+        .tag-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-top: 0.8rem;
+        }
+
+        .tag {
+            background: #1e1e1e;
+            color: var(--text-sub);
+            border: 1px solid var(--panel-border);
+            padding: 0.2rem 0.6rem;
+            font-size: 0.78rem;
+            border-radius: 4px;
+        }
+
+        .tag.highlight {
+            color: var(--accent-purple);
+            border-color: var(--accent-purple);
+        }
+
+        footer {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid var(--panel-border);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+
+        footer a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="base-header">
+        <div class="container">
+            <div class="header-top">
+                <div>
+                    <h1 class="site-title">Mustafa Us</h1>
+                    <span class="sub-name">Can US</span>
+                </div>
+                <a href="contact.html" class="btn-contact"><i class="fa-solid fa-paper-plane"></i> Contact Me</a>
+            </div>
+            <nav class="nav-tabs">
+                <a href="index.html" class="nav-tab">Who I Am</a>
+                <a href="skills.html" class="nav-tab">Skills</a>
+                <a href="experience.html" class="nav-tab active">Experience</a>
+                <a href="projects.html" class="nav-tab">Projects</a>
+                <a href="contact.html" class="nav-tab">Contact</a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="content-panel">
+            <h2 class="section-heading"><i class="fa-solid fa-briefcase"></i> Work Experience</h2>
+
+            <!-- 3. Chainly -->
+            <div class="timeline-card">
+                <div class="card-header">
+                    <div>
+                        <div class="role-title">Co-Founder & Vice President of Engineering</div>
+                        <div class="company-name"><a href="https://www.chainly.dev/" target="_blank"
+                                style="color: var(--accent-blue); text-decoration: none;">Chainly (chainly.dev) <i
+                                    class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.65rem;"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="location-text"><i class="fa-solid fa-location-dot"></i> Miami, Florida, USA</div>
+                <ul class="bullets-list">
+                    <li>Co-founded <a href="https://www.chainly.dev/" target="_blank"
+                            style="color: var(--accent-cyan); text-decoration: none;">Chainly</a>, architecting
+                        customized Erigon Ethereum node solutions and high-throughput EVM blockchain infrastructure.
+                    </li>
+                    <li>Engineered AI-driven anomaly detection models operating directly on customized Erigon nodes to
+                        identify real-time transaction anomalies, security threats, and irregular network patterns.</li>
+                    <li>Led engineering teams in developing scalable cloud hosting, node indexing, and mass blockchain
+                        data analytics platforms.</li>
+                </ul>
+                <div class="tag-group">
+                    <span class="tag highlight">Custom Erigon</span>
+                    <span class="tag highlight">AI Anomaly Detection</span>
+                    <span class="tag">EVM Nodes</span>
+                    <span class="tag">Blockchain Infrastructure</span>
+                    <span class="tag">Chainly.dev</span>
+                </div>
+            </div>
+
+            <!-- 4. ANTODIS -->
+            <div class="timeline-card">
+                <div class="card-header">
+                    <div>
+                        <div class="role-title">Head Of Software Development</div>
+                        <div class="company-name">ANTODIS</div>
+                    </div>
+                </div>
+                <div class="location-text"><i class="fa-solid fa-location-dot"></i> Istanbul, Turkey</div>
+                <ul class="bullets-list">
+                    <li>Designed enterprise software architectures, CI/CD pipelines, and high-availability
+                        <strong>on-premises (on-prem) Industrial IoT (IIoT) infrastructure</strong>.
+                    </li>
+                    <li>Developed custom <strong>edge devices</strong> and edge computing architectures to process
+                        massive streams of industrial big data in real time.</li>
+                    <li>Architected and built the industrial IoT platform <strong>"Seshat"</strong> (later evolved into
+                        Deshret/Redland) for real-time device control, telemetry, and field communication.</li>
+                    <li>Deployed and managed on-prem <strong>NVIDIA DGX Workstations</strong> and <strong>Dell PowerEdge
+                            R740/R840</strong> enterprise servers for IIoT big data processing and AI operations.</li>
+                </ul>
+                <div class="tag-group">
+                    <span class="tag highlight">On-Prem IIoT Infra</span>
+                    <span class="tag highlight">Edge Devices & Big Data</span>
+                    <span class="tag highlight">Seshat IoT Platform</span>
+                    <span class="tag">NVIDIA DGX</span>
+                    <span class="tag">CI/CD</span>
+                </div>
+            </div>
+
+            <!-- 5. CodexDF -->
+            <div class="timeline-card">
+                <div class="card-header">
+                    <div>
+                        <div class="role-title">Contractor - Rust / Go & Blockchain Engineer</div>
+                        <div class="company-name">CodexDF</div>
+                    </div>
+                </div>
+                <div class="location-text"><i class="fa-solid fa-location-dot"></i> Bellevue, Washington, USA</div>
+                <ul class="bullets-list">
+                    <li>Engineered high-performance microservices and data pipelines in Rust and Go for cryptocurrency
+                        tax reporting systems.</li>
+                    <li>Deployed, synchronized, and managed production high-availability blockchain nodes to process
+                        real-time block and transaction data.</li>
+                </ul>
+                <div class="tag-group">
+                    <span class="tag highlight">Rust</span>
+                    <span class="tag highlight">Go</span>
+                    <span class="tag highlight">Blockchain Nodes</span>
+                    <span class="tag">Node Operations</span>
+                    <span class="tag">Crypto Tax Engine</span>
+                </div>
+            </div>
+
+            <!-- 6. Blatform Token -->
+            <div class="timeline-card">
+                <div class="card-header">
+                    <div>
+                        <div class="role-title">Contractor - Blockchain Engineer</div>
+                        <div class="company-name">Blatform Token</div>
+                    </div>
+                </div>
+                <div class="location-text"><i class="fa-solid fa-location-dot"></i> Singapore</div>
+                <ul class="bullets-list">
+                    <li>Developed token smart contracts (Solidity 9/10) and blockchain integration layers.</li>
+                </ul>
+                <div class="tag-group">
+                    <span class="tag highlight">Solidity</span>
+                    <span class="tag">DeFi</span>
+                    <span class="tag">Smart Contracts</span>
+                </div>
+            </div>
+
+            <!-- 7. Aksa Power Generation -->
+            <div class="timeline-card">
+                <div class="card-header">
+                    <div>
+                        <div class="role-title">Contractor - IIoT Engineer</div>
+                        <div class="company-name">Aksa Power Generation</div>
+                    </div>
+                </div>
+                <div class="location-text"><i class="fa-solid fa-location-dot"></i> Turkey</div>
+                <ul class="bullets-list">
+                    <li>Programmed data acquisition and telemetry logging software for industrial generator controllers
+                        and IoT hardware.</li>
+                </ul>
+            </div>
+
+            <!-- 8. IQ Vision -->
+            <div class="timeline-card">
+                <div class="card-header">
+                    <div>
+                        <div class="role-title">Software Developer</div>
+                        <div class="company-name">IQ Vision</div>
+                    </div>
+                </div>
+                <div class="location-text"><i class="fa-solid fa-location-dot"></i> Istanbul, Turkey</div>
+                <ul class="bullets-list">
+                    <li>Developed industrial IoT (IIoT) software architectures and field communication data telemetry.
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 9. Genomize -->
+            <div class="timeline-card">
+                <div class="card-header">
+                    <div>
+                        <div class="role-title">Solution Developer & AWS Architect</div>
+                        <div class="company-name">Genomize</div>
+                    </div>
+                </div>
+                <div class="location-text"><i class="fa-solid fa-location-dot"></i> Istanbul, Turkey</div>
+                <ul class="bullets-list">
+                    <li>Designed high-performance data processing pipelines on AWS for bioinformatics big data analytics
+                        and genomic sequencing workflows.</li>
+                </ul>
+                <div class="tag-group">
+                    <span class="tag">Bioinformatics</span>
+                    <span class="tag">AWS Cloud</span>
+                    <span class="tag">Python</span>
+                </div>
+            </div>
+
+            <!-- 10. TıkaBasa App & POS -->
+            <div class="timeline-card">
+                <div class="card-header">
+                    <div>
+                        <div class="role-title">Research Engineer</div>
+                        <div class="company-name">TıkaBasa App & POS</div>
+                    </div>
+                </div>
+                <div class="location-text"><i class="fa-solid fa-location-dot"></i> Istanbul, Turkey</div>
+                <ul class="bullets-list">
+                    <li>Conducted R&D engineering for mobile ordering platforms and POS hardware system integrations.
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 11. Influenster -->
+            <div class="timeline-card">
+                <div class="card-header">
+                    <div>
+                        <div class="role-title">Vice President of Engineering - Contractor</div>
+                        <div class="company-name">Influenster.com</div>
+                    </div>
+                </div>
+                <div class="location-text"><i class="fa-solid fa-location-dot"></i> New York City, NY, USA</div>
+                <ul class="bullets-list">
+                    <li>Set up AWS infrastructure, load balancing, and auto-scaling logic.</li>
+                    <li>Migrated core data architecture from MySQL to MongoDB and integrated Apache Solr for search.
+                        Developed Influenster Dashboard, flowchart-based User Selection Panel, and Python REST API.</li>
+                </ul>
+                <div class="tag-group">
+                    <span class="tag">Python</span>
+                    <span class="tag">MongoDB</span>
+                    <span class="tag">Apache Solr</span>
+                    <span class="tag">AWS</span>
+                </div>
+            </div>
+
+            <!-- 12. Kitap Network / Pttkitap.com -->
+            <div class="timeline-card">
+                <div class="card-header">
+                    <div>
+                        <div class="role-title">Project Manager / Software Engineer</div>
+                        <div class="company-name">Kitap Network / Pttkitap.com</div>
+                    </div>
+                </div>
+                <div class="location-text"><i class="fa-solid fa-location-dot"></i> Turkey</div>
+                <ul class="bullets-list">
+                    <li>Built real-time e-commerce architecture (MongoDB, Solr, tested up to 5,000 concurrent requests).
+                        Developed Python OS-level synchronization services, managed Nginx load balancers and VMware ESXi
+                        5 distributed DB/Web server clusters.</li>
+                </ul>
+            </div>
+
+            <!-- 13. Acun Media -->
+            <div class="timeline-card">
+                <div class="card-header">
+                    <div>
+                        <div class="role-title">Head of Software Development - Acunn.com</div>
+                        <div class="company-name">Acun Media</div>
+                    </div>
+                </div>
+                <div class="location-text"><i class="fa-solid fa-location-dot"></i> Istanbul, Turkey</div>
+                <ul class="bullets-list">
+                    <li>Architected and managed high-traffic publishing platform and software infrastructure for
+                        Acunn.com portal.</li>
+                </ul>
+            </div>
+
+            <!-- 14. Mynet -->
+            <div class="timeline-card">
+                <div class="card-header">
+                    <div>
+                        <div class="role-title">Chef of Game Development & Web Developer</div>
+                        <div class="company-name">Mynet</div>
+                    </div>
+                </div>
+                <div class="location-text"><i class="fa-solid fa-location-dot"></i> Istanbul, Turkey</div>
+                <ul class="bullets-list">
+                    <li>Developed Mynet İlan, Nevarya.com migration, and Mynet Games. Programmed Python, FFMPEG, and
+                        HandbrakeCli video/audio processing microservices for Birgo.com.</li>
+                </ul>
+            </div>
+
+            <!-- 15. Metglobal -->
+            <div class="timeline-card">
+                <div class="card-header">
+                    <div>
+                        <div class="role-title">Software Engineer</div>
+                        <div class="company-name">Metglobal</div>
+                    </div>
+                </div>
+                <div class="location-text"><i class="fa-solid fa-location-dot"></i> Istanbul, Turkey</div>
+                <ul class="bullets-list">
+                    <li>Developed airport transfer XML data pipelines and REST API integrations for Tatil.com and
+                        Hotelspro.com.</li>
+                </ul>
+            </div>
+
+            <!-- 16. Verscom -->
+            <div class="timeline-card">
+                <div class="card-header">
+                    <div>
+                        <div class="role-title">Software Specialist</div>
+                        <div class="company-name">Verscom & MSO İstanbul</div>
+                    </div>
+                </div>
+                <div class="location-text"><i class="fa-solid fa-location-dot"></i> Istanbul, Turkey</div>
+                <ul class="bullets-list">
+                    <li>Developed Albatros B2B VoIP/SIP gateway management system (ColdFusion, Oracle/MSSQL). Built
+                        first website and CMS for MSO İstanbul (İstanbul Park).</li>
+                </ul>
+            </div>
+
+            <!-- 17. Nealsak.com -->
+            <div class="timeline-card">
+                <div class="card-header">
+                    <div>
+                        <div class="role-title">Software Manager</div>
+                        <div class="company-name">Nealsak.com</div>
+                    </div>
+                </div>
+                <div class="location-text"><i class="fa-solid fa-location-dot"></i> Istanbul, Turkey</div>
+                <ul class="bullets-list">
+                    <li>Led dev team to build custom PHP/MySQL e-commerce platform from scratch replacing osCommerce.
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <footer>
+            <p>© 2026 Mustafa US (Yontar) — Free Software Activist & Systems Architect.</p>
+            <p style="margin-top: 0.8rem;">
+                <a href="https://github.com/canusdev/cv" target="_blank"><i class="fa-brands fa-github"></i> GitHub
+                    Repository</a> •
+                <a href="mailto:xcoder@msn.com"><i class="fa-solid fa-envelope"></i> xcoder@msn.com</a>
+            </p>
+        </footer>
+    </div>
+
+</body>
+
+</html>

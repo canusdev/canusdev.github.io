@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Mustafa US (Yontar) - Contact Channels & Social Links</title>
+    <meta name="description" content="Contact information, email channels, and social links for Mustafa US (Yontar).">
+    <meta name="author" content="Mustafa US (Yontar)">
+
+    <!-- Google Fonts: Press Start 2P & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-dark: #000000;
+            --bg-card: #0d0d0d;
+            --panel-border: #222222;
+
+            --text-main: #ffffff;
+            --text-sub: #c0c0c0;
+            --text-muted: #808080;
+
+            --accent-blue: #58a6ff;
+            --accent-cyan: #00f2fe;
+            --accent-purple: #bc8cff;
+            --accent-green: #3fb950;
+            --accent-orange: #f74c00;
+            --accent-yellow: #d29922;
+
+            --font-heading: 'Press Start 2P', cursive, monospace;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            animation: none !important;
+            transition: none !important;
+        }
+
+        body {
+            background-color: #000000 !important;
+            color: var(--text-main);
+            font-family: var(--font-body);
+            font-size: 14px;
+            line-height: 1.8;
+            padding-bottom: 4rem;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .site-title,
+        .section-heading,
+        .nav-tab,
+        .btn-contact,
+        .channel-title {
+            font-family: var(--font-heading);
+        }
+
+        .container {
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Top Header & Nav */
+        .base-header {
+            border-bottom: 2px solid var(--panel-border);
+            background: #080808;
+            padding-top: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .site-title {
+            font-size: 1.6rem;
+            color: #ffffff;
+            margin-bottom: 0.4rem;
+            line-height: 1.4;
+        }
+
+        .sub-name {
+            font-size: 0.85rem;
+            color: var(--accent-cyan);
+            font-weight: 500;
+        }
+
+        .btn-contact {
+            background: #1f6feb;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 0.65rem;
+            border: 1px solid #388bfd;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-contact:hover {
+            background: #388bfd;
+        }
+
+        /* Navigation Tabs */
+        .nav-tabs {
+            display: flex;
+            gap: 0.4rem;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        .nav-tab {
+            color: var(--text-sub);
+            text-decoration: none;
+            padding: 0.65rem 1rem;
+            font-size: 0.68rem;
+            border: 2px solid var(--panel-border);
+            border-bottom: none;
+            background: #0d0d0d;
+            border-radius: 6px 6px 0 0;
+        }
+
+        .nav-tab:hover {
+            color: var(--accent-cyan);
+            border-color: var(--accent-cyan);
+        }
+
+        .nav-tab.active {
+            color: #ffffff;
+            background: #181818;
+            border-color: var(--accent-cyan);
+            border-bottom: 2px solid #181818;
+            margin-bottom: -2px;
+        }
+
+        /* Content Panel */
+        .content-panel {
+            background: #0d0d0d;
+            border: 2px solid var(--panel-border);
+            border-radius: 6px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .section-heading {
+            font-size: 0.95rem;
+            color: var(--accent-cyan);
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--panel-border);
+            padding-bottom: 0.6rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            line-height: 1.6;
+        }
+
+        .channels-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .channel-card {
+            background: #141414;
+            border: 1px solid var(--panel-border);
+            padding: 1.5rem;
+            border-radius: 6px;
+        }
+
+        .channel-title {
+            font-size: 0.8rem;
+            color: var(--accent-cyan);
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            line-height: 1.5;
+        }
+
+        .channel-detail {
+            font-size: 0.92rem;
+            color: var(--text-sub);
+            line-height: 1.9;
+        }
+
+        .channel-detail a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        .channel-detail a:hover {
+            text-decoration: underline;
+        }
+
+        .btn-pdf-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: #1f6feb;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0.7rem 1.4rem;
+            border-radius: 4px;
+            font-family: var(--font-heading);
+            font-size: 0.7rem;
+            border: 1px solid #388bfd;
+            margin-top: 1.5rem;
+        }
+
+        .btn-pdf-download:hover {
+            background: #388bfd;
+        }
+
+        footer {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid var(--panel-border);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+
+        footer a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="base-header">
+        <div class="container">
+            <div class="header-top">
+                <div>
+                    <h1 class="site-title">Mustafa Us</h1>
+                    <span class="sub-name">Can US</span>
+                </div>
+                <a href="contact.html" class="btn-contact"><i class="fa-solid fa-paper-plane"></i> Contact Me</a>
+            </div>
+            <nav class="nav-tabs">
+                <a href="index.html" class="nav-tab">Who I Am</a>
+                <a href="skills.html" class="nav-tab">Skills</a>
+                <a href="experience.html" class="nav-tab">Experience</a>
+                <a href="projects.html" class="nav-tab">Projects</a>
+                <a href="contact.html" class="nav-tab active">Contact</a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="content-panel">
+            <h2 class="section-heading"><i class="fa-solid fa-envelope"></i> Direct Contact & Social Channels</h2>
+
+            <div class="channels-grid">
+                <!-- E-Mail Channels -->
+                <div class="channel-card">
+                    <div class="channel-title"><i class="fa-solid fa-at"></i> Direct E-Mail</div>
+                    <div class="channel-detail">
+                        • <strong>Primary:</strong> <a href="mailto:xcoder@msn.com">xcoder {at} msn {dot} com</a><br>
+                        • <strong>Secondary:</strong> <a href="mailto:mustafa@w3ic.org">mustafa {at} w3ic {dot} org</a>
+                    </div>
+                </div>
+
+                <!-- Code & Repositories -->
+                <div class="channel-card">
+                    <div class="channel-title"><i class="fa-brands fa-github"></i> Code & Repositories</div>
+                    <div class="channel-detail">
+                        • <strong>GitHub Profile:</strong> <a href="https://github.com/canusdev"
+                            target="_blank">github.com/canusdev</a><br>
+                    </div>
+                </div>
+
+                <!-- Professional Networks -->
+                <div class="channel-card">
+                    <div class="channel-title"><i class="fa-brands fa-linkedin"></i> Professional Networks</div>
+                    <div class="channel-detail">
+                        • <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/myontar"
+                            target="_blank">linkedin.com/in/myontar</a><br>
+                    </div>
+                </div>
+
+                <!-- Radio Call Sign & Location -->
+                <div class="channel-card">
+                    <div class="channel-title"><i class="fa-solid fa-radio"></i> Radio & Location</div>
+                    <div class="channel-detail">
+                        • <strong>Amateur Radio Call Sign:</strong> TB3AAE<br>
+                        • <strong>Location:</strong> Istanbul / Çanakkale, Turkey
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2026 Mustafa US (Yontar) — Free Software Activist & Systems Architect.</p>
+            <p style="margin-top: 0.8rem;">
+                <a href="https://github.com/canusdev/cv" target="_blank"><i class="fa-brands fa-github"></i> GitHub
+                    Repository</a> •
+                <a href="mailto:xcoder@msn.com"><i class="fa-solid fa-envelope"></i> xcoder@msn.com</a>
+            </p>
+        </footer>
+    </div>
+
+</body>
+
+</html>

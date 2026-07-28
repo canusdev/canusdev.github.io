@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who I Am | Mustafa US (Yontar) - Systems Architect & Free Software Activist</title>
+    <meta name="description"
+        content="Mustafa US (Yontar) - Free Software Activist, Hacker, OYD & hackerspace.ist Co-Founder, Systems Architect, Blockchain & AI Engineer.">
+    <meta name="author" content="Mustafa US (Yontar)">
+
+    <!-- Google Fonts: Press Start 2P & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-dark: #000000;
+            --bg-card: #0d0d0d;
+            --panel-border: #222222;
+
+            --text-main: #ffffff;
+            --text-sub: #c0c0c0;
+            --text-muted: #808080;
+
+            --accent-blue: #58a6ff;
+            --accent-cyan: #00f2fe;
+            --accent-purple: #bc8cff;
+            --accent-green: #3fb950;
+            --accent-orange: #f74c00;
+            --accent-yellow: #d29922;
+
+            --font-heading: 'Press Start 2P', cursive, monospace;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            animation: none !important;
+            transition: none !important;
+        }
+
+        body {
+            background-color: #000000 !important;
+            color: var(--text-main);
+            font-family: var(--font-body);
+            font-size: 14px;
+            line-height: 1.8;
+            padding-bottom: 4rem;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .site-title,
+        .section-heading,
+        .nav-tab,
+        .btn-contact,
+        .status-badge,
+        .highlight-title,
+        .role-title,
+        .project-title {
+            font-family: var(--font-heading);
+        }
+
+        .container {
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Top Header & Nav */
+        .base-header {
+            border-bottom: 2px solid var(--panel-border);
+            background: #080808;
+            padding-top: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .site-title {
+            font-size: 1.6rem;
+            color: #ffffff;
+            margin-bottom: 0.4rem;
+            line-height: 1.4;
+        }
+
+        .sub-name {
+            font-size: 0.85rem;
+            color: var(--accent-cyan);
+            font-weight: 500;
+        }
+
+        .btn-contact {
+            background: #1f6feb;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 0.65rem;
+            border: 1px solid #388bfd;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-contact:hover {
+            background: #388bfd;
+        }
+
+        /* Navigation Tabs */
+        .nav-tabs {
+            display: flex;
+            gap: 0.4rem;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        .nav-tab {
+            color: var(--text-sub);
+            text-decoration: none;
+            padding: 0.65rem 1rem;
+            font-size: 0.68rem;
+            border: 2px solid var(--panel-border);
+            border-bottom: none;
+            background: #0d0d0d;
+            border-radius: 6px 6px 0 0;
+        }
+
+        .nav-tab:hover {
+            color: var(--accent-cyan);
+            border-color: var(--accent-cyan);
+        }
+
+        .nav-tab.active {
+            color: #ffffff;
+            background: #181818;
+            border-color: var(--accent-cyan);
+            border-bottom: 2px solid #181818;
+            margin-bottom: -2px;
+        }
+
+        /* Content Panel */
+        .content-panel {
+            background: #0d0d0d;
+            border: 2px solid var(--panel-border);
+            border-radius: 6px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #081a0e;
+            border: 1px solid var(--accent-green);
+            color: var(--accent-green);
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.62rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--accent-green);
+        }
+
+        .section-heading {
+            font-size: 0.95rem;
+            color: var(--accent-cyan);
+            margin-bottom: 1.2rem;
+            border-bottom: 1px solid var(--panel-border);
+            padding-bottom: 0.6rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            line-height: 1.6;
+        }
+
+        .bio-paragraph {
+            color: var(--text-sub);
+            font-size: 0.95rem;
+            margin-bottom: 1.3rem;
+            line-height: 1.8;
+        }
+
+        .bio-paragraph strong {
+            color: #ffffff;
+        }
+
+        .bio-paragraph a {
+            color: var(--accent-cyan);
+            text-decoration: none;
+        }
+
+        .bio-paragraph a:hover {
+            text-decoration: underline;
+        }
+
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.2rem;
+            margin-top: 1.5rem;
+        }
+
+        .highlight-box {
+            background: #141414;
+            border: 1px solid var(--panel-border);
+            padding: 1.2rem;
+            border-radius: 4px;
+        }
+
+        .highlight-title {
+            color: var(--accent-purple);
+            font-size: 0.75rem;
+            margin-bottom: 0.6rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            line-height: 1.5;
+        }
+
+        .highlight-text {
+            font-size: 0.88rem;
+            color: var(--text-sub);
+            line-height: 1.7;
+        }
+
+        footer {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid var(--panel-border);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+
+        footer a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            .site-title {
+                font-size: 1.2rem;
+            }
+
+            .nav-tabs {
+                flex-direction: column;
+            }
+
+            .nav-tab {
+                border-bottom: 2px solid var(--panel-border);
+                border-radius: 4px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="base-header">
+        <div class="container">
+            <div class="header-top">
+                <div>
+                    <h1 class="site-title">Mustafa Us</h1>
+                    <span class="sub-name">Can US</span>
+                </div>
+                <a href="contact.html" class="btn-contact"><i class="fa-solid fa-paper-plane"></i> Contact Me</a>
+            </div>
+            <nav class="nav-tabs">
+                <a href="index.html" class="nav-tab active">Who I Am</a>
+                <a href="skills.html" class="nav-tab">Skills</a>
+                <a href="experience.html" class="nav-tab">Experience</a>
+                <a href="projects.html" class="nav-tab">Projects</a>
+                <a href="contact.html" class="nav-tab">Contact</a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="content-panel">
+            <div class="status-badge">
+                <div class="status-dot"></div>
+                Free Software Activist & Systems Architect
+            </div>
+
+            <h2 class="section-heading"><i class="fa-solid fa-user-astronaut"></i> Who I Am</h2>
+
+            <p class="bio-paragraph">
+                I am a <strong>free software activist</strong>, <strong>hacker</strong>, <strong>amateur radio
+                    enthusiast (TB3AAE)</strong> and father of Alef.
+            </p>
+
+            <p class="bio-paragraph">
+                My first encounter with computers was with the <strong>Commodore 64 in 1989</strong>, and I started
+                software programming with the BASIC programming language. I sold my first professional software in
+                <strong>1993</strong>. So far, I have developed production projects in programming languages such as
+                <strong>C, C++, PHP, Visual Basic, Go, Rust, Python, Solidity, and Dart</strong>. I also developed web
+                and mobile interfaces with frameworks such as <strong>Vue, Angular, and Flutter</strong>.
+            </p>
+
+            <p class="bio-paragraph">
+                Making electronic circuits and mechatronics is my passion and hobby, with completed commercial products.
+                I have been using <strong>GNU/Linux exclusively since 1996</strong>.
+            </p>
+
+            <h2 class="section-heading" style="margin-top: 2rem;"><i class="fa-solid fa-users"></i> Community &
+                Foundations</h2>
+
+            <p class="bio-paragraph">
+                I am a co-founder and active member of the <strong>Free Software Association (Özgür Yazılım Derneği -
+                    OYD)</strong> and a co-founder of <strong>hackerspace.ist</strong>, one of Turkey's first
+                independent community hackerspaces. I also serve as an instructor at the <strong>Linux Users Association
+                    (LKD)</strong> Summer Software Camp.
+            </p>
+
+            <p class="bio-paragraph">
+                <strong>Under the OYD umbrella</strong>, I architected and built the low-latency live streaming and
+                WebRTC conference publishing pipeline for <a href="https://ozgurkon.org/2026/tr/"
+                    target="_blank">ÖzgürKon 2026</a>.
+            </p>
+
+            <div class="highlights-grid">
+                <div class="highlight-box">
+                    <div class="highlight-title"><i class="fa-solid fa-cube"></i> Blockchain & EVM Chains</div>
+                    <div class="highlight-text">
+                        Co-founded <a href="https://www.chainly.dev/" target="_blank"
+                            style="color: var(--accent-cyan); text-decoration: none;">Chainly (chainly.dev)</a>. Expert
+                        in <strong>Solidity (9/10)</strong> smart contracts, customizing core <strong>Erigon</strong>
+                        nodes, and building real-time <strong>AI anomaly detection engines</strong> for EVM chains.
+                    </div>
+                </div>
+
+                <div class="highlight-box">
+                    <div class="highlight-title"><i class="fa-solid fa-brain"></i> Deep Learning & AI</div>
+                    <div class="highlight-text">
+                        Fine-tuned Gemma 4 models to auto-generate MongoDB aggregation pipelines and Flutter UI code.
+                        Fine-tuned NVIDIA NeMo for Turkish ASR speech recognition.
+                    </div>
+                </div>
+
+                <div class="highlight-box">
+                    <div class="highlight-title"><i class="fa-solid fa-shield-halved"></i> Open Source Security & Aegis
+                    </div>
+                    <div class="highlight-text">
+                        Architected <a href="https://aegishttp.github.io/" target="_blank"
+                            style="color: var(--accent-cyan); text-decoration: none;">Aegis / AegisHTTP</a> (E2E GPG
+                        Gateway) and open source Go tools: <strong>dashpub</strong>, <strong>go-rpminfo</strong>,
+                        <strong>go-snapinfo</strong>, and <strong>go-yaps</strong>.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2026 Mustafa US (Yontar) — Free Software Activist & Systems Architect.</p>
+            <p style="margin-top: 0.8rem;">
+                <a href="https://github.com/canusdev/cv" target="_blank"><i class="fa-brands fa-github"></i> GitHub
+                    Repository</a> •
+                <a href="mailto:xcoder@msn.com"><i class="fa-solid fa-envelope"></i> xcoder@msn.com</a>
+            </p>
+        </footer>
+    </div>
+
+</body>
+
+</html>

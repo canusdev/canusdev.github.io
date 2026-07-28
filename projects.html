@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Mustafa US (Yontar) - Open Source Repositories & Systems Projects</title>
+    <meta name="description"
+        content="Open source repositories, Aegis, Dashpub, Go tools, AI, Blockchain, and Edge projects by Mustafa US (Yontar).">
+    <meta name="author" content="Mustafa US (Yontar)">
+
+    <!-- Google Fonts: Press Start 2P & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-dark: #000000;
+            --bg-card: #0d0d0d;
+            --panel-border: #222222;
+
+            --text-main: #ffffff;
+            --text-sub: #c0c0c0;
+            --text-muted: #808080;
+
+            --accent-blue: #58a6ff;
+            --accent-cyan: #00f2fe;
+            --accent-purple: #bc8cff;
+            --accent-green: #3fb950;
+            --accent-orange: #f74c00;
+            --accent-yellow: #d29922;
+
+            --font-heading: 'Press Start 2P', cursive, monospace;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            animation: none !important;
+            transition: none !important;
+        }
+
+        body {
+            background-color: #000000 !important;
+            color: var(--text-main);
+            font-family: var(--font-body);
+            font-size: 14px;
+            line-height: 1.8;
+            padding-bottom: 4rem;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .site-title,
+        .section-heading,
+        .nav-tab,
+        .btn-contact,
+        .project-title {
+            font-family: var(--font-heading);
+        }
+
+        .container {
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Top Header & Nav */
+        .base-header {
+            border-bottom: 2px solid var(--panel-border);
+            background: #080808;
+            padding-top: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .site-title {
+            font-size: 1.6rem;
+            color: #ffffff;
+            margin-bottom: 0.4rem;
+            line-height: 1.4;
+        }
+
+        .sub-name {
+            font-size: 0.85rem;
+            color: var(--accent-cyan);
+            font-weight: 500;
+        }
+
+        .btn-contact {
+            background: #1f6feb;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 0.65rem;
+            border: 1px solid #388bfd;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-contact:hover {
+            background: #388bfd;
+        }
+
+        /* Navigation Tabs */
+        .nav-tabs {
+            display: flex;
+            gap: 0.4rem;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        .nav-tab {
+            color: var(--text-sub);
+            text-decoration: none;
+            padding: 0.65rem 1rem;
+            font-size: 0.68rem;
+            border: 2px solid var(--panel-border);
+            border-bottom: none;
+            background: #0d0d0d;
+            border-radius: 6px 6px 0 0;
+        }
+
+        .nav-tab:hover {
+            color: var(--accent-cyan);
+            border-color: var(--accent-cyan);
+        }
+
+        .nav-tab.active {
+            color: #ffffff;
+            background: #181818;
+            border-color: var(--accent-cyan);
+            border-bottom: 2px solid #181818;
+            margin-bottom: -2px;
+        }
+
+        /* Content Panel */
+        .content-panel {
+            background: #0d0d0d;
+            border: 2px solid var(--panel-border);
+            border-radius: 6px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .section-heading {
+            font-size: 0.95rem;
+            color: var(--accent-cyan);
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--panel-border);
+            padding-bottom: 0.6rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            line-height: 1.6;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            background: #141414;
+            border: 1px solid var(--panel-border);
+            padding: 1.5rem;
+            border-radius: 6px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .project-card.featured-card {
+            border-color: var(--accent-cyan);
+            background: #0b151c;
+        }
+
+        .project-icon {
+            font-size: 1.4rem;
+            color: var(--accent-cyan);
+            margin-bottom: 0.8rem;
+        }
+
+        .project-title {
+            font-size: 0.82rem;
+            color: #ffffff;
+            margin-bottom: 0.6rem;
+            line-height: 1.5;
+        }
+
+        .project-desc {
+            font-size: 0.88rem;
+            color: var(--text-sub);
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .project-desc a {
+            color: var(--accent-cyan);
+            text-decoration: none;
+        }
+
+        .project-desc a:hover {
+            text-decoration: underline;
+        }
+
+        .link-group {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .btn-project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.45rem 0.9rem;
+            background: #081a24;
+            border: 1px solid var(--accent-cyan);
+            color: var(--accent-cyan);
+            border-radius: 4px;
+            font-size: 0.78rem;
+            text-decoration: none;
+            width: fit-content;
+        }
+
+        .btn-project-link:hover {
+            background: rgba(0, 242, 254, 0.2);
+            color: #ffffff;
+        }
+
+        .tag-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+        }
+
+        .tag {
+            background: #1e1e1e;
+            color: var(--text-sub);
+            border: 1px solid var(--panel-border);
+            padding: 0.2rem 0.6rem;
+            font-size: 0.78rem;
+            border-radius: 4px;
+        }
+
+        .tag.highlight {
+            color: var(--accent-purple);
+            border-color: var(--accent-purple);
+        }
+
+        footer {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid var(--panel-border);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+
+        footer a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="base-header">
+        <div class="container">
+            <div class="header-top">
+                <div>
+                    <h1 class="site-title">Mustafa Us</h1>
+                    <span class="sub-name">Can US</span>
+                </div>
+                <a href="contact.html" class="btn-contact"><i class="fa-solid fa-paper-plane"></i> Contact Me</a>
+            </div>
+            <nav class="nav-tabs">
+                <a href="index.html" class="nav-tab">Who I Am</a>
+                <a href="skills.html" class="nav-tab">Skills</a>
+                <a href="experience.html" class="nav-tab">Experience</a>
+                <a href="projects.html" class="nav-tab active">Projects</a>
+                <a href="contact.html" class="nav-tab">Contact</a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="content-panel">
+            <h2 class="section-heading"><i class="fa-solid fa-code"></i> Open Source Repositories & Key Projects</h2>
+
+            <div class="projects-grid">
+
+                <!-- 1. Aegis / AegisHTTP (TOP FEATURED) -->
+                <div class="project-card featured-card">
+                    <div>
+                        <div class="project-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h3 class="project-title">Aegis / AegisHTTP</h3>
+                        <p class="project-desc">
+                            Autonomous, end-to-end (E2E) encrypted, GPG-based HTTP gateway protocol and production
+                            TypeScript SDK for verifiable secure data transmission. Live at <a
+                                href="https://aegishttp.github.io/" target="_blank">aegishttp.github.io</a>.
+                        </p>
+                        <div class="link-group">
+                            <a href="https://aegishttp.github.io/" target="_blank" class="btn-project-link">
+                                <i class="fa-solid fa-globe"></i> Website <i
+                                    class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7rem;"></i>
+                            </a>
+                            <a href="https://github.com/AegisHttp" target="_blank" class="btn-project-link">
+                                <i class="fa-brands fa-github"></i> Repository <i
+                                    class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7rem;"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="tag-group">
+                        <span class="tag highlight">Aegis / AegisHTTP</span>
+                        <span class="tag highlight">GPG Gateway</span>
+                        <span class="tag">TypeScript SDK</span>
+                        <span class="tag">E2E Encryption</span>
+                    </div>
+                </div>
+
+                <!-- 2. Dashpub (TOP FEATURED) -->
+                <div class="project-card featured-card">
+                    <div>
+                        <div class="project-icon"><i class="fa-solid fa-chart-line"></i></div>
+                        <h3 class="project-title">Dashpub</h3>
+                        <p class="project-desc">
+                            Open source dashboard publishing framework and metrics visualization engine written in Go
+                            for rapid analytics rendering and data aggregation.
+                        </p>
+                        <div class="link-group">
+                            <a href="https://github.com/canusdev/dashpub" target="_blank" class="btn-project-link">
+                                <i class="fa-brands fa-github"></i> Repository <i
+                                    class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7rem;"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="tag-group">
+                        <span class="tag highlight">Go</span>
+                        <span class="tag highlight">Open Source</span>
+                        <span class="tag">Dashboard Publishing</span>
+                        <span class="tag">Metrics Engine</span>
+                    </div>
+                </div>
+
+                <!-- 3. Venus (TOP FEATURED) -->
+                <div class="project-card featured-card">
+                    <div>
+                        <div class="project-icon"><i class="fa-solid fa-planet-ring"></i></div>
+                        <h3 class="project-title">Venus</h3>
+                        <p class="project-desc">
+                            Open source Go systems repository and lightweight service infrastructure framework for
+                            high-concurrency microservices.
+                        </p>
+                        <div class="link-group">
+                            <a href="https://github.com/antandros/venus" target="_blank" class="btn-project-link">
+                                <i class="fa-brands fa-github"></i> Repository <i
+                                    class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7rem;"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="tag-group">
+                        <span class="tag highlight">Go</span>
+                        <span class="tag highlight">Open Source</span>
+                        <span class="tag">Systems Framework</span>
+                    </div>
+                </div>
+
+                <!-- 3. go-rpminfo (TOP FEATURED) -->
+                <div class="project-card featured-card">
+                    <div>
+                        <div class="project-icon"><i class="fa-solid fa-box-open"></i></div>
+                        <h3 class="project-title">go-rpminfo</h3>
+                        <p class="project-desc">
+                            Open source Go library for extracting binary RPM package metadata, analyzing header
+                            structures, and inspecting RedHat/Fedora package contents.
+                        </p>
+                        <div class="link-group">
+                            <a href="https://github.com/antandros/go-rpminfo" target="_blank" class="btn-project-link">
+                                <i class="fa-brands fa-github"></i> Repository <i
+                                    class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7rem;"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="tag-group">
+                        <span class="tag highlight">Go</span>
+                        <span class="tag highlight">RPM Parser</span>
+                        <span class="tag">Linux Systems</span>
+                        <span class="tag">Open Source</span>
+                    </div>
+                </div>
+
+                <!-- 4. go-snapinfo (TOP FEATURED) -->
+                <div class="project-card featured-card">
+                    <div>
+                        <div class="project-icon"><i class="fa-solid fa-box"></i></div>
+                        <h3 class="project-title">go-snapinfo</h3>
+                        <p class="project-desc">
+                            Open source Go utility for parsing Ubuntu Snap package structures, inspecting manifest data,
+                            and extracting snap package metadata.
+                        </p>
+                        <div class="link-group">
+                            <a href="https://github.com/antandros/go-snapinfo" target="_blank" class="btn-project-link">
+                                <i class="fa-brands fa-github"></i> Repository <i
+                                    class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7rem;"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="tag-group">
+                        <span class="tag highlight">Go</span>
+                        <span class="tag highlight">Snap Parser</span>
+                        <span class="tag">Ubuntu Packaging</span>
+                        <span class="tag">Open Source</span>
+                    </div>
+                </div>
+
+                <!-- 5. go-yaps (TOP FEATURED) -->
+                <div class="project-card featured-card">
+                    <div>
+                        <div class="project-icon"><i class="fa-solid fa-cubes"></i></div>
+                        <h3 class="project-title">go-yaps</h3>
+                        <p class="project-desc">
+                            Open source Go package management and build orchestration utility (Yet Another Package
+                            System) designed for modular dependency handling.
+                        </p>
+                        <div class="link-group">
+                            <a href="https://github.com/antandros/go-yaps" target="_blank" class="btn-project-link">
+                                <i class="fa-brands fa-github"></i> Repository <i
+                                    class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7rem;"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="tag-group">
+                        <span class="tag highlight">Go</span>
+                        <span class="tag highlight">Package System</span>
+                        <span class="tag">Build Tool</span>
+                        <span class="tag">Open Source</span>
+                    </div>
+                </div>
+
+                <!-- 6. Chainly: Custom Erigon & AI Anomaly Engine -->
+                <div class="project-card">
+                    <div>
+                        <div class="project-icon"><i class="fa-solid fa-cube"></i></div>
+                        <h3 class="project-title">Chainly: Custom Erigon & AI Anomaly Engine</h3>
+                        <p class="project-desc">
+                            Co-founded <a href="https://www.chainly.dev/" target="_blank">Chainly (chainly.dev)</a>,
+                            customizing <strong>Erigon</strong> core node architecture from scratch. Integrated
+                            <strong>AI-driven anomaly detection models</strong> over Erigon nodes to identify real-time
+                            transaction anomalies and security threats.
+                        </p>
+                        <div class="link-group">
+                            <a href="https://www.chainly.dev/" target="_blank" class="btn-project-link">
+                                <i class="fa-solid fa-globe"></i> Visit Chainly.dev <i
+                                    class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7rem;"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="tag-group">
+                        <span class="tag highlight">Chainly.dev</span>
+                        <span class="tag highlight">Custom Erigon</span>
+                        <span class="tag highlight">AI Anomaly Detection</span>
+                        <span class="tag">Solidity (9/10)</span>
+                    </div>
+                </div>
+
+                <!-- 7. ÖzgürKon 2026 Streaming Pipeline -->
+                <div class="project-card">
+                    <div>
+                        <div class="project-icon"><i class="fa-solid fa-tower-broadcast"></i></div>
+                        <h3 class="project-title">ÖzgürKon 2026 Streaming Infrastructure</h3>
+                        <p class="project-desc">
+                            Architected and deployed the low-latency live video streaming and WebRTC conference
+                            publishing pipeline for <a href="https://ozgurkon.org/2026/tr/" target="_blank">ÖzgürKon
+                                2026</a> under the <strong>Free Software Association (OYD)</strong> umbrella.
+                        </p>
+                        <div class="link-group">
+                            <a href="https://ozgurkon.org/2026/tr/" target="_blank" class="btn-project-link">
+                                <i class="fa-solid fa-globe"></i> ÖzgürKon 2026 Website <i
+                                    class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7rem;"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="tag-group">
+                        <span class="tag highlight">ÖzgürKon 2026</span>
+                        <span class="tag">OYD</span>
+                        <span class="tag">WebRTC</span>
+                        <span class="tag">Streaming Pipeline</span>
+                    </div>
+                </div>
+
+                <!-- 8. Gemma 4 Fine-Tuning -->
+                <div class="project-card">
+                    <div>
+                        <div class="project-icon"><i class="fa-solid fa-brain"></i></div>
+                        <h3 class="project-title">Gemma 4 Fine-Tuning (MongoDB & Flutter Gen)</h3>
+                        <p class="project-desc">
+                            Fine-tuned <strong>Gemma 4</strong> language models on domain datasets to auto-generate
+                            complex <strong>MongoDB aggregation pipelines</strong> and responsive <strong>Flutter
+                                UI</strong> interface code directly from natural language prompts.
+                        </p>
+                    </div>
+                    <div class="tag-group">
+                        <span class="tag highlight">Gemma 4 Fine-Tuning</span>
+                        <span class="tag">MongoDB Pipeline</span>
+                        <span class="tag">Flutter UI Gen</span>
+                    </div>
+                </div>
+
+                <!-- 9. NVIDIA NeMo Fine-Tuning -->
+                <div class="project-card">
+                    <div>
+                        <div class="project-icon"><i class="fa-solid fa-wave-square"></i></div>
+                        <h3 class="project-title">NVIDIA NeMo Fine-Tuning & Turkish ASR</h3>
+                        <p class="project-desc">
+                            Fine-tuned NVIDIA NeMo ASR model architectures on specialized audio datasets to <strong>add
+                                native Turkish language speech recognition support</strong>, building low-latency
+                            real-time audio streaming pipelines.
+                        </p>
+                    </div>
+                    <div class="tag-group">
+                        <span class="tag highlight">NVIDIA NeMo</span>
+                        <span class="tag">Turkish ASR Fine-Tuning</span>
+                        <span class="tag">Streaming Speech</span>
+                    </div>
+                </div>
+
+                <!-- 10. Deshret / Redland (formerly Seshat) -->
+                <div class="project-card">
+                    <div>
+                        <div class="project-icon"><i class="fa-solid fa-gear"></i></div>
+                        <h3 class="project-title">Deshret / Redland (formerly Seshat IoT)</h3>
+                        <p class="project-desc">
+                            Re-architected low-level industrial device control and IoT management platform (originally
+                            deployed as <strong>Seshat</strong> at ANTODIS) in <strong>Rust</strong>, delivering thread
+                            safety, memory security, and extreme concurrency for field devices.
+                        </p>
+                    </div>
+                    <div class="tag-group">
+                        <span class="tag highlight">Seshat / Deshret</span>
+                        <span class="tag highlight">Rust</span>
+                        <span class="tag">Industrial IoT</span>
+                        <span class="tag">Edge Devices</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <footer>
+            <p>© 2026 Mustafa US (Yontar) — Free Software Activist & Systems Architect.</p>
+            <p style="margin-top: 0.8rem;">
+                <a href="https://github.com/canusdev/cv" target="_blank"><i class="fa-brands fa-github"></i> GitHub
+                    Repository</a> •
+                <a href="mailto:xcoder@msn.com"><i class="fa-solid fa-envelope"></i> xcoder@msn.com</a>
+            </p>
+        </footer>
+    </div>
+
+</body>
+
+</html>
